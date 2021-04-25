@@ -1,0 +1,569 @@
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="stylesheets/test.css" />
+  <link rel="stylesheet" href="stylesheets/jquery.mobile.icons.min.css" />
+
+
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 
+ 
+ 
+ 
+ 
+ 
+<script src="javascripts/index.js"></script>
+
+
+
+
+
+<div data-role="page" id="homepage">
+
+	<div data-role="header">
+		<h1>Doughnut Delights</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>Freshly baked doughnuts delivered straight to your door</p>
+        
+        
+        <a href="#register" class="ui-btn">Register</a>
+        <a href="#login" class="ui-btn">Login</a>
+		
+        
+        
+        
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Not a real company, no doughnuts will be delivered</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="register">
+
+	<div data-role="header">
+		<h1>Register</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+	
+    
+    Username <input type="text" id="username"/> <br>
+
+    E-mail <input type="text" id="email"/> <br>
+    
+    Password <input type="text" id="password"/> <br>
+
+    Account type <input type="text" id="acctype"/> <br>
+
+
+    <button id="submitbutton"> Submit Button </button>
+    
+    
+    
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Not a real company, no doughnuts will be delivered</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<script>
+// when the submitbutton is clicked
+$( "#submitbutton" ).click(function(event) {
+  // stop the default redirect of the browser
+  event.preventDefault();
+  
+  // grab the values
+  var username = $('#username').val();
+  var email = $('#email').val();
+  var password = $('#password').val();
+  var acctype = $('#acctype').val();
+  
+  
+  var isValid = true;
+  
+  if(username == ""){
+     alert("Please enter a username");
+     isValid = false;
+  }
+  if(!email.includes("@")){
+     alert("Please enter a valid email");
+     isValid = false;
+  }
+
+ // only send the data to the database, if the param is true.
+  if(isValid == true){
+      // send the data to the server-side
+      $.post( "/putInDatabase", { username: username, email: email, password:password, acctype:acctype })
+      .done(function( data ) {
+        alert( "Data Loaded: " + data );
+      });
+  }
+  
+  
+  
+});
+
+</script>
+
+
+
+
+
+
+
+
+<div data-role="page" id="login">
+
+	<div data-role="header">
+		<h1>Login</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>Page content goes here.</p>
+        
+        
+        Username <input type="text" id="loginUsername"/> <br>
+        Password <input type="text" id="loginPassword"/> <br>
+
+        
+         <button id="loginbutton"> Login Button </button>
+         
+         
+        
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Not a real company, no doughnuts will be delivered</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<script>
+// when the submitbutton is clicked
+$( "#loginbutton" ).click(function(event) {
+  // stop the default redirect of the browser
+  event.preventDefault();
+  
+  // grabbing the values
+  var un = $('#loginUsername').val();
+  var pw = $('#loginPassword').val();
+  
+  if(un == "")
+  {
+     alert("Please enter a username");
+  }
+  if(pw ==""){
+    alert("please enter a password");
+  }
+  
+  
+  
+  var accountType = checkTheLogin(un, pw);
+  
+  
+     
+        if(accountType.includes("customer")){
+        
+           // move to the customer dashboard
+           window.location="/#customerdash";
+        }
+        else if(accountType.includes("driver")){
+        
+           // move to the driver dashboard
+             window.location="/#driverdash";
+        }
+        else if(accountType.includes("manager")){
+        
+        
+           // make a call to the severside to get the data!
+            $.get( "/getManagerData", function( data ) {
+            // throw the data onto the manager page
+                $( "#managerOutput" ).html( data );
+          
+            });
+                
+        
+           // move to the manager dashboard
+           window.location="/#manager";
+        }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   });  
+</script>
+
+<script>
+var myCart = [];
+
+</script>
+
+<div data-role="page" id="customerdash">
+
+	<div data-role="header">
+		<h1>Customer Dash</h1>
+	</div><!-- /header -->
+    
+    
+   
+    
+   
+    
+	<div role="main" class="ui-content">
+		  
+<div class="ui-field-contain">
+    <label for="select-native-2">Chocolate Doughnut</label>
+   
+<select id="chocolate_doughnut_qty" name="select-native-2" id="select-native-2" data-mini="true">
+        <option value=""></option>
+		<option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+<button id="addtocart" onclick="addToCart('chocolate_doughnut_qty')"> Add To Cart </button>
+
+</div>
+
+
+
+       <div id="productdata"> </div>
+       
+         <script>
+        $.get( "/getProducts", function( data ) {
+              
+              $("#productdata").html(data);
+        });
+        </script>
+   
+
+
+
+        <button id="goToCheckout"> Checkout </button>
+
+        
+         
+        
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Not a real company, no doughnuts will be delivered</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="checkoutreview">
+
+	<div data-role="header">
+		<h1>Review your order</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		 
+            
+          <div id="products">
+          </div>
+        
+         <button id="insertintodb">Complete Checkout</button>
+        
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Not a real company, no doughnuts will be delivered</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+
+
+<script>
+$( "#insertintodb" ).click(function() {
+
+    // get the persons username
+     var orderby = $('#loginUsername').val();
+     
+     // get the list of products from the shopping cart
+     var items = myCart.toString();
+     
+     $.post( "/completeCheckout", { orderby:orderby, items:items })
+          .done(function( data ) {
+            alert( "Data Loaded: " + data );
+          });      
+
+});
+</script>
+
+
+
+
+
+
+<script>
+
+
+
+
+
+$( "#goToCheckout" ).click(function() {
+
+        // update the div tag with the shopping cart
+        
+        var cartItems = myCart.toString().split(',');
+        // for each record, append them to the procuts div.
+        
+        // wipe the products div tag!
+        $('#products').html('');
+        
+        var total = 0;
+        
+        for(var i=0; i< cartItems.length; i++){
+            
+            
+            var singleRecord = cartItems[i].split('-');
+            
+                             // qty *  cost of one item
+            var itemTotal = singleRecord[1] * singleRecord[2];    
+            
+            // add it on to our running total. 
+            total = total + itemTotal;
+            
+            $('#products').append(cartItems[i] + '<br>');
+        }
+        
+       $('#products').append("Total cost of order: "+total);
+
+        // move to to the checkout review
+        window.location="/#checkoutreview";
+});
+
+
+function deleteProduct(item){
+    
+    // loop over the cart
+    myCart.forEach(function(itemCurrent, index, array) {
+                
+               // look for the item we want to delete.
+               if(itemCurrent.includes(item)){
+                  console.log("Removing previous reference to " + item);
+                  myCart.pop(index);
+               }
+        });
+}
+
+function addToCart(itemName,cost){
+    // finding out the name of the ITEM we are adding
+    var item = itemName;
+	console.log(item);
+    
+    // dynamically find out the qty
+	var qty = $('#'+item).children("option:selected").val();
+	console.log(qty);
+    
+    // search the cart and see if we already added
+    // the item. If we did, remove the old qty.
+
+    myCart.forEach(function(itemCurrent, index, array) {
+           
+           
+           
+           if(itemCurrent.includes(item)){
+              console.log("Removing previous reference to " + item);
+              myCart.pop(index);
+           }
+    });
+    
+    
+    // add the item to the cart
+    myCart.push(item + '-' + qty + '-'+ cost);
+    
+    alert(myCart);
+
+    
+
+
+}
+
+</script>
+
+<div data-role="page" id="driverdash">
+
+	<div data-role="header">
+		<h1>Driver</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>Page content goes here.</p>
+		
+		The current temperature in Dublin is: <div id="currentTemp"> degrees  </div>  
+		
+<script>
+
+
+$.getJSON( "http://api.weatherstack.com/current?access_key=d0b2b171e91e285a0885896a6342a223&query=Dublin", function( json ) {
+  console.log( "JSON Data: " +json.current.temperature );
+  
+  $('#currentTemp').html(json.current.temperature);
+  
+ });
+</script>
+		
+        
+        <div id="driverOutput">
+        
+        </div>
+       
+         
+         <script>
+         $.get( "/getDriverData", function( data ) {
+             $('#driverOutput').html(data);
+            });
+         </script>
+        
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Not a real company, no doughnuts will be delivered</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="manager">
+
+	<div data-role="header">
+		<h1>Manager</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>Page content goes here.</p>
+        
+        <div id="managerOutput">
+        
+        </div>
+       
+         
+         <script>
+         $.get( "/getManagerData", function( data ) {
+             $('#managerOutput').html(data);
+            });
+         </script>
+         
+         
+         Date: <input type="text" id="datepicker"></p>
+         
+         <script>
+         $( function() {
+            $( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
+          } );
+          </script>
+          <button onclick="getRangeDatepicker()"> Get Range Data </button>
+          
+          
+          
+          
+          
+         
+         <select id="getOrderByRange">
+         <option value="7">  7 days </option>
+         <option value="30">  30 days </option>
+                  
+         </select>
+         
+         <button onclick="getRangeData()"> Get Range Data </button>
+         
+         <div id="rangeData">
+         
+         </div>
+         
+         
+         <script>
+         function getRangeData(){
+         
+         // 7 or 30 days   
+        var range = $('#getOrderByRange').children("option:selected").val();
+       
+             
+             
+           
+             
+             $.post( "/getRangeData", { range: range} )
+              .done(function( data ) {
+                $('#rangeData').html(data);
+              });
+         
+         }
+         
+         function getRangeDatepicker(){
+         
+            // getting the date
+            var date = $('#datepicker').val();
+       
+
+             
+           
+             
+             $.post( "/getRangeDatePicker", { range: date} )
+              .done(function( data ) {
+                $('#rangeData').html(data);
+              });
+         
+         }
+         
+         </script>
+        
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Not a real company, no doughnuts will be delivered</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<script>
+function markAsDelivered(id){
+
+    
+    
+    $.post( "/updateOrderStatus", { id: id })
+  .done(function( data ) {
+    alert( "Data Loaded: " + data );
+  });
+    
+}
+
+
+function deleteOrder(id){
+
+    
+    
+    $.post( "/deleteOrder", { id: id })
+  .done(function( data ) {
+    alert( "Data Loaded: " + data );
+   location.reload();
+    
+  });
+    
+}
+
+</script>
+
+
