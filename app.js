@@ -449,7 +449,7 @@ app.get('/getImageFromFile', function (req, res) {
   
   con.connect(function(err) {
   if (err) throw err;
-  con.query("SELECT picturepath FROM products WHERE id = 18", function (err, result, fields) {
+  con.query("SELECT picturepath FROM products WHERE id = 1", function (err, result, fields) {
     if (err) throw err;
    
     res.send(result[0].picturepath);
@@ -493,7 +493,7 @@ app.get('/getProducts', function (req, res) {
 
        output = output + `
        
-       <img src="`+result[i].picturepath+`" style="height:100px;width:100px">
+       <img src="`+result[i].picturepath+`" style="height:150px;width:150px"> 
        
        <div class="ui-field-contain">
             <label for="select-native-2">`+result[i].productname+`</label>
