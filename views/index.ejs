@@ -4,7 +4,7 @@
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="stylesheets/test.css" />
+<link rel="stylesheet" href="stylesheets/test1.css" />
   <link rel="stylesheet" href="stylesheets/jquery.mobile.icons.min.css" />
 
 
@@ -399,7 +399,7 @@ function addToCart(itemName,cost){
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<p>Page content goes here.</p>
+		<p>Driver Dashboard!!<br> Please drive safely </p>
 		
 		The current temperature in Dublin is: <div id="currentTemp"> degrees  </div>  
 		
@@ -412,13 +412,14 @@ $.getJSON( "http://api.weatherstack.com/current?access_key=d0b2b171e91e285a08858
   $('#currentTemp').html(json.current.temperature);
   
  });
+ 
 </script>
-		
+			
         
         <div id="driverOutput">
         
         </div>
-       
+       <br>
          
          <script>
          $.get( "/getDriverData", function( data ) {

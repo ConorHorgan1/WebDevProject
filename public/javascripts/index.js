@@ -4,7 +4,7 @@ $.ajaxSetup({async:false});
 
 function returnName(){
 
-   return 'kyle';
+   return 'conor';
 }
 
 

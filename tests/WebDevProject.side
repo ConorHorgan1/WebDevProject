@@ -1,0 +1,627 @@
+{
+  "id": "28ebde27-f6c9-42bf-9e3d-76624ca941d1",
+  "version": "2.0",
+  "name": "WebDevProject",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "8412d64f-c8ce-48c5-bd60-82353d38d1e8",
+    "name": "Login Customer",
+    "commands": [{
+      "id": "bae5dc2f-33b5-4661-aecb-bb43ec42b38b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d68261e0-d652-47eb-adc4-6520b22c58f5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1360x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00e317fc-9e7c-4bcc-b3dc-6d03482f73c7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.ui-btn:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//div[@id='homepage']/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#login')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd1ff922-3591-4d7e-ba4e-a97807f448ed",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginUsername",
+      "targets": [
+        ["id=loginUsername", "id"],
+        ["css=#loginUsername", "css:finder"],
+        ["xpath=//input[@id='loginUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae16491a-ab4d-4201-a08d-4e2248b58adb",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginUsername",
+      "targets": [
+        ["id=loginUsername", "id"],
+        ["css=#loginUsername", "css:finder"],
+        ["xpath=//input[@id='loginUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "e66e8cf8-d43b-41bf-8c0d-db80a171bddc",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginPassword",
+      "targets": [
+        ["id=loginPassword", "id"],
+        ["css=#loginPassword", "css:finder"],
+        ["xpath=//input[@id='loginPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e736ba6-a33c-4a6a-89dd-cc4ef976bf84",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginPassword",
+      "targets": [
+        ["id=loginPassword", "id"],
+        ["css=#loginPassword", "css:finder"],
+        ["xpath=//input[@id='loginPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "750f2fa2-efcf-42b3-876c-66c1a0433765",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginbutton",
+      "targets": [
+        ["id=loginbutton", "id"],
+        ["css=#loginbutton", "css:finder"],
+        ["xpath=//button[@id='loginbutton']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login Button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "fc50f7bf-2113-4d3c-86a2-342bb696dbf8",
+    "name": "Login Manager",
+    "commands": [{
+      "id": "bfa1dbc3-b492-49f9-a907-eeec810015c7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9144479-6862-4b6d-8f57-567d7f482e3e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1360x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "847fc716-0e80-45d9-abde-3634096d31a6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.ui-btn:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//div[@id='homepage']/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#login')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1f5a059-3e44-45fa-ba35-00a0aa5913a1",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginUsername",
+      "targets": [
+        ["id=loginUsername", "id"],
+        ["css=#loginUsername", "css:finder"],
+        ["xpath=//input[@id='loginUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd8631e8-3aa9-4047-8fc5-cfa2a29505fd",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginUsername",
+      "targets": [
+        ["id=loginUsername", "id"],
+        ["css=#loginUsername", "css:finder"],
+        ["xpath=//input[@id='loginUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "dfa8bbcf-d5eb-4b5f-a372-21b94c117208",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginPassword",
+      "targets": [
+        ["id=loginPassword", "id"],
+        ["css=#loginPassword", "css:finder"],
+        ["xpath=//input[@id='loginPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd2b7988-6be2-476b-b1c0-3afcb000e4d2",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginPassword",
+      "targets": [
+        ["id=loginPassword", "id"],
+        ["css=#loginPassword", "css:finder"],
+        ["xpath=//input[@id='loginPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "f2c554ff-3ff3-476c-bdfe-29c19d4350d6",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginbutton",
+      "targets": [
+        ["id=loginbutton", "id"],
+        ["css=#loginbutton", "css:finder"],
+        ["xpath=//button[@id='loginbutton']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login Button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b7ad465-0f02-43b1-85d0-7fedb3372ac7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=loginbutton",
+      "targets": [
+        ["id=loginbutton", "id"],
+        ["css=#loginbutton", "css:finder"],
+        ["xpath=//button[@id='loginbutton']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login Button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e017bffb-1de2-4d10-a8d3-49eef591a6e4",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=loginbutton",
+      "targets": [
+        ["id=loginbutton", "id"],
+        ["css=#loginbutton", "css:finder"],
+        ["xpath=//button[@id='loginbutton']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login Button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "537584c8-50e3-4c74-a753-14dda70bf846",
+    "name": "Login Driver",
+    "commands": [{
+      "id": "9f1752b5-3f3b-43b8-89ff-446f1729fdbb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84c93dcb-d124-4392-aea0-80ec8955fd8d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1360x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c486598-9eda-4e2f-81a1-e36731c9f3d4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.ui-btn:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//div[@id='homepage']/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#login')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91f28b23-7c75-45a5-8566-5f16b3d272e5",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginUsername",
+      "targets": [
+        ["id=loginUsername", "id"],
+        ["css=#loginUsername", "css:finder"],
+        ["xpath=//input[@id='loginUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bef85d4-350e-4632-8662-5c7d7a7321d5",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginUsername",
+      "targets": [
+        ["id=loginUsername", "id"],
+        ["css=#loginUsername", "css:finder"],
+        ["xpath=//input[@id='loginUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "299d0769-c416-4530-9585-927f33ddcc23",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginPassword",
+      "targets": [
+        ["id=loginPassword", "id"],
+        ["css=#loginPassword", "css:finder"],
+        ["xpath=//input[@id='loginPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4033b9a6-5436-4a4e-84d7-bfd43ed9f958",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginPassword",
+      "targets": [
+        ["id=loginPassword", "id"],
+        ["css=#loginPassword", "css:finder"],
+        ["xpath=//input[@id='loginPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "a2a0af85-8e5f-4dd9-b370-f04d4e57f794",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginbutton",
+      "targets": [
+        ["id=loginbutton", "id"],
+        ["css=#loginbutton", "css:finder"],
+        ["xpath=//button[@id='loginbutton']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login Button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7e6245ae-dc35-404f-a5f4-0f9efeeb415a",
+    "name": "driver completing order",
+    "commands": [{
+      "id": "ca91b086-4d5a-4de3-b758-602d3900dbc3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e28e3cf9-79bc-4ffd-84c6-afdef9152dce",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1360x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ee8efee-d247-4b25-a3b2-c61e55abc366",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.ui-btn:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//div[@id='homepage']/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#login')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfa5050f-b5f3-4c8c-8f42-497144ff78a5",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginUsername",
+      "targets": [
+        ["id=loginUsername", "id"],
+        ["css=#loginUsername", "css:finder"],
+        ["xpath=//input[@id='loginUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dc4e1c5-cdd8-42a7-bdfd-8f2a7a5611bb",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginUsername",
+      "targets": [
+        ["id=loginUsername", "id"],
+        ["css=#loginUsername", "css:finder"],
+        ["xpath=//input[@id='loginUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "3897f997-3489-42e6-90c4-6767dd97d21f",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginPassword",
+      "targets": [
+        ["id=loginPassword", "id"],
+        ["css=#loginPassword", "css:finder"],
+        ["xpath=//input[@id='loginPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e0ffc6e-7f53-4997-b3a2-4d3dbae6d2b6",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginPassword",
+      "targets": [
+        ["id=loginPassword", "id"],
+        ["css=#loginPassword", "css:finder"],
+        ["xpath=//input[@id='loginPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "bd5017fa-7cda-4401-8a20-2ac3d95a1bcf",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginbutton",
+      "targets": [
+        ["id=loginbutton", "id"],
+        ["css=#loginbutton", "css:finder"],
+        ["xpath=//button[@id='loginbutton']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login Button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5960620b-ab36-403e-8080-a10691ab12dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-btn:nth-child(1)",
+      "targets": [
+        ["css=.ui-btn:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='markAsDelivered(8)']", "xpath:attributes"],
+        ["xpath=//div[@id='driverOutput']/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Change to delivered')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3c70705-8eb5-4a01-9b62-c7c531cd594a",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Data Loaded: ok",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "289692f6-7832-4ad5-964c-7d030703b9f6",
+    "name": "manager date range",
+    "commands": [{
+      "id": "365b7bd5-0ec1-412a-a13f-75c06737d8ce",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10c06463-8847-4022-baa0-df065114ff28",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1360x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df87b211-6241-43ce-a6e4-928d62b84cd9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.ui-btn:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//div[@id='homepage']/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#login')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7780d6f5-c8bd-452c-ae8e-1d68f7aea82c",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginUsername",
+      "targets": [
+        ["id=loginUsername", "id"],
+        ["css=#loginUsername", "css:finder"],
+        ["xpath=//input[@id='loginUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "64ab14c7-851d-4941-8423-cf2215465ac6",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginUsername",
+      "targets": [
+        ["id=loginUsername", "id"],
+        ["css=#loginUsername", "css:finder"],
+        ["xpath=//input[@id='loginUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "01d3699d-572b-40ea-a1f8-a43490e492b1",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginPassword",
+      "targets": [
+        ["id=loginPassword", "id"],
+        ["css=#loginPassword", "css:finder"],
+        ["xpath=//input[@id='loginPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f1df9e3-b0a1-40ac-ba57-c60a1be29bee",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginPassword",
+      "targets": [
+        ["id=loginPassword", "id"],
+        ["css=#loginPassword", "css:finder"],
+        ["xpath=//input[@id='loginPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "bd4a2e87-7745-45cf-91e1-582896b152a2",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginbutton",
+      "targets": [
+        ["id=loginbutton", "id"],
+        ["css=#loginbutton", "css:finder"],
+        ["xpath=//button[@id='loginbutton']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login Button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1bd16a1-98ea-4f5c-aaf0-46ceb9415085",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=loginbutton",
+      "targets": [
+        ["id=loginbutton", "id"],
+        ["css=#loginbutton", "css:finder"],
+        ["xpath=//button[@id='loginbutton']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login Button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e064b77-3923-41ff-baaa-f7ec50ba94a0",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=loginbutton",
+      "targets": [
+        ["id=loginbutton", "id"],
+        ["css=#loginbutton", "css:finder"],
+        ["xpath=//button[@id='loginbutton']", "xpath:attributes"],
+        ["xpath=//div[@id='login']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login Button')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4d10495-63f6-4396-ac25-ccd219dae0ff",
+      "comment": "",
+      "command": "click",
+      "target": "id=getOrderByRange-button",
+      "targets": [
+        ["id=getOrderByRange-button", "id"],
+        ["css=#getOrderByRange-button", "css:finder"],
+        ["xpath=//span[@id='getOrderByRange-button']", "xpath:attributes"],
+        ["xpath=//div[@id='manager']/div[2]/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'7 days')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8011f0f-5a7e-4f8d-bcf6-3e14c1b2c80d",
+      "comment": "",
+      "command": "click",
+      "target": "id=ui-id-2",
+      "targets": [
+        ["id=ui-id-2", "id"],
+        ["css=#ui-id-2", "css:finder"],
+        ["xpath=//div[@id='ui-id-2']", "xpath:attributes"],
+        ["xpath=//ul[@id='getOrderByRange-menu']/li[2]/div", "xpath:idRelative"],
+        ["xpath=//li[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ae04b9f-8b98-444f-b106-38455dfeacc3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-btn:nth-child(10)",
+      "targets": [
+        ["css=.ui-btn:nth-child(10)", "css:finder"],
+        ["xpath=//button[@onclick='getRangeData()']", "xpath:attributes"],
+        ["xpath=//div[@id='manager']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[7]/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "28aa7702-0058-451e-80b9-2f09f5cec83f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8412d64f-c8ce-48c5-bd60-82353d38d1e8"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}
